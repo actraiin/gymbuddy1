@@ -6,5 +6,13 @@
         "contact": "(123)456-7890",
         "username": "gym",
         "password": "buddy"
+    },
+    {
+        "name": "Austin Tran",
+        "age": "21",
+        "gender": "male",
+        "contact": "(111)111-1111",
+        "username": "act",
+        "password": "act"
     }
 ]

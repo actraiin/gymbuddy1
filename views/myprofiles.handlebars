@@ -23,33 +23,7 @@
 	<div class="container">
     
     <h4>Active Profiles</h4>
-    <table class="tftable" border="1">
-      <tr><th>Name</th><th>Activity</th><th>Days</th></tr>
-      {{#each profiles}}
-        <tr onclick=loadProfileToEdit({{this.profileNumber}}) data-toggle="modal" data-target="#EditProfileModal">
-          <td>{{this.profileName}}</td>
-          <td>
-            SPOTTER<br>
-            {{#if this.spotter.0.range}} {{this.spotter.0.range}} (lbs) {{/if}} 
-            {{#if this.spotter.0.skill}} , {{this.spotter.0.skill}} {{/if}}<br><br>
-        
-            RUNNING<br>
-            {{#if this.running.0.distance}} {{this.running.0.distance}} (mi) {{/if}}
-            {{#if this.running.0.skill}} , {{this.running.0.skill}} {{/if}}
-          </td>
-          
-          <td>
-            {{#if this.schedule.0.monday}}Monday: {{this.schedule.0.monday}} <br>{{/if}}
-            {{#if this.schedule.0.tuesday}}Tuesday: {{this.schedule.0.tuesday}}<br>{{/if}}
-            {{#if this.schedule.0.wednesday}}Wednesday: {{this.schedule.0.wednesday}}<br>{{/if}}
-            {{#if this.schedule.0.thursday}}Thursday: {{this.schedule.0.thursday}}<br>{{/if}}
-            {{#if this.schedule.0.friday}}Friday: {{this.schedule.0.friday}}<br>{{/if}}
-            {{#if this.schedule.0.saturday}}Saturday: {{this.schedule.0.saturday}}<br>{{/if}}
-            {{#if this.schedule.0.sunday}}Sunday: {{this.schedule.0.sunday}}<br>{{/if}}
-          </td>
-
-        </tr>
-      {{/each}}      
+    <table class="tftable" border="1"> 
     </table>
     <br>
 

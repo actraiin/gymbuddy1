@@ -1,5 +1,20 @@
 [
     {
+        "username": "gym",
+        "profileName": "dev",
+        "spottingRange" : "60-80",
+        "spottingSkill": 4,
+        "runningRange" : "3-4",
+        "runningSkill" : 4,
+        "monday": "",
+        "tuesday": "",
+        "wednesday": "06:15",
+        "thursday": "",
+        "friday": "",
+        "saturday": "",
+        "sunday": ""
+    },
+    {
         "username": "act",
         "profileName": "dev",
         "spottingRange" : "60-80",
@@ -11,7 +26,7 @@
         "wednesday": "",
         "thursday": "",
         "friday": "",
-        "saturday": "6:15",
+        "saturday": "06:15",
         "sunday": ""
     }
 ]
