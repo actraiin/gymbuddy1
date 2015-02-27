@@ -37,9 +37,15 @@ exports.save = function(req, res) {
     var username = req.params.username;
     var profileName = global_profileName;
     var liftingRangeValue = global_liftingRangeValue; 
-    var liftingSkillValue = global_liftingSkillValue;
+    if (global_liftingSkillValue)
+        var liftingSkillValue = global_liftingSkillValue;
+    else
+        var liftingSkillValue = 0;
     var runningRangeValue = global_runningRangeValue;
-    var runningSkillValue = global_runningSkillValue;
+    if (global_runningSkillValue)
+        var runningSkillValue = global_runningSkillValue;
+    else
+        var runningSkillValue = 0;
     var mondayTimeValue = global_mondayTimeValue;
     var tuesdayTimeValue = global_tuesdayTimeValue;
     var wednesdayTimeValue = global_wednesdayTimeValue;
@@ -48,11 +54,8 @@ exports.save = function(req, res) {
     var saturdayTimeValue = global_saturdayTimeValue;
     var sundayTimeValue = global_sundayTimeValue;
 
-    console.log("new lifting skill value: " + liftingSkillValue);
-
-    models.Profile
-    .find({"username":username, "profileName":profileName})
-    .update({
+    var conditions = {"username":username, "profileName":profileName};
+    var updates = {
         "username":username,
         "profileName":profileName,
         "spottingRange":liftingRangeValue,
@@ -65,8 +68,13 @@ exports.save = function(req, res) {
         "thursday":thursdayTimeValue,
         "friday":fridayTimeValue,
         "saturday":saturdayTimeValue,
-        "sunday":sundayTimeValue})
-    .exec(afterUpdating);
+        "sunday":sundayTimeValue
+    };
+    var options = {multi: true};
+
+    models.Profile
+    .find()
+    .update(conditions, updates, options, afterUpdating);
 
     function afterUpdating(err, results) {
         if(err) console.log(err);
