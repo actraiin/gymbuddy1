@@ -23,10 +23,25 @@
         "runningSkill" : 4,
         "monday": "",
         "tuesday": "",
-        "wednesday": "",
+        "wednesday": "06:15",
         "thursday": "",
         "friday": "",
-        "saturday": "06:15",
+        "saturday": "",
+        "sunday": ""
+    },
+    {
+        "username": "gym",
+        "profileName": "dev",
+        "spottingRange" : "60-80",
+        "spottingSkill": 4,
+        "runningRange" : "3-4",
+        "runningSkill" : 4,
+        "monday": "",
+        "tuesday": "",
+        "wednesday": "",
+        "thursday": "12:30",
+        "friday": "",
+        "saturday": "",
         "sunday": ""
     }
 ]
