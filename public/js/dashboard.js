@@ -40,19 +40,19 @@ function initializePage() {
                 matches[i]["username"] +'</center></td><td>';
             
             if (matches[i]["monday"] != "")
-                new_html+='Monday @ ' + matches[i]["monday"];
+                new_html+='Monday @ ' + matches[i]["monday"] + '<br>';
             if (matches[i]["tuesday"] != "")
-                new_html+='Tuesday @ ' + matches[i]["tuesday"];
+                new_html+='Tuesday @ ' + matches[i]["tuesday"] + '<br>';
             if (matches[i]["wednesday"] != "")
-                new_html+='Wednesday @ ' + matches[i]["wednesday"];
+                new_html+='Wednesday @ ' + matches[i]["wednesday"] + '<br>';
             if (matches[i]["thursday"] != "")
-                new_html+='Thursday @ ' + matches[i]["thursday"];
+                new_html+='Thursday @ ' + matches[i]["thursday"] + '<br>';
             if (matches[i]["friday"] != "")
-                new_html+='Friday @ ' + matches[i]["friday"];
+                new_html+='Friday @ ' + matches[i]["friday"] + '<br>';
             if (matches[i]["saturday"] != "")
-                new_html+='Saturday @ ' + matches[i]["saturday"];
+                new_html+='Saturday @ ' + matches[i]["saturday"] + '<br>';
             if (matches[i]["sunday"] != "")
-                new_html+='Sunday @ ' + matches[i]["sunday"];
+                new_html+='Sunday @ ' + matches[i]["sunday"] + '<br>';
             
             new_html+='</td></tr>';
 
@@ -79,11 +79,11 @@ function loadModalWithMatch(result) {
 
     $('#matchedUsername').text("Username: " + username);
     if (spottingRange != "N/A")
-        $('#matchedSpottingrange').text("Spotting Range: " + spottingRange);
+        $('#matchedSpottingrange').text("Spotting Range: " + spottingRange + " (lbs)");
     if (spottingSkill != "")
         $('#matchedSpottingskill').text("Spotting Skill: " + spottingSkill);
     if (runningRange != "N/A")
-        $('#matchedRunningrange').text("Running Range: " + runningRange);
+        $('#matchedRunningrange').text("Running Range: " + runningRange + " (mi)");
     if (runningSkill != "")
         $('#matchedRunningskill').text("Running Skill: " + runningSkill);
 

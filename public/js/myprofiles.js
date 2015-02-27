@@ -55,19 +55,19 @@ function initializePage() {
     		new_html += '</td><td>';
 
     		if (profiles[i]["monday"] != "")
-                new_html += 'Monday @ ' + profiles[i]["monday"];
+                new_html += 'Monday @ ' + profiles[i]["monday"] + '<br>';
             if (profiles[i]["tuesday"] != "")
-                new_html += 'Tuesday @ ' + profiles[i]["tuesday"];
+                new_html += 'Tuesday @ ' + profiles[i]["tuesday"] + '<br>';
             if (profiles[i]["wednesday"] != "")
-                new_html += 'Wednesday @ ' + profiles[i]["wednesday"];
+                new_html += 'Wednesday @ ' + profiles[i]["wednesday"] + '<br>';
             if (profiles[i]["thursday"] != "")
-                new_html += 'Thursday @ ' + profiles[i]["thursday"];
+                new_html += 'Thursday @ ' + profiles[i]["thursday"] + '<br>';
             if (profiles[i]["friday"] != "")
-                new_html += 'Friday @ ' + profiles[i]["friday"];
+                new_html += 'Friday @ ' + profiles[i]["friday"] + '<br>';
             if (profiles[i]["saturday"] != "")
-                new_html += 'Saturday @ ' + profiles[i]["saturday"];
+                new_html += 'Saturday @ ' + profiles[i]["saturday"] + '<br>';
             if (profiles[i]["sunday"] != "")
-                new_html += 'Sunday @ ' + profiles[i]["sunday"];
+                new_html += 'Sunday @ ' + profiles[i]["sunday"] + '<br>';
 
             new_html += '</td></tr>';
     	}
