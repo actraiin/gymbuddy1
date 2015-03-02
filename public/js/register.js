@@ -2,6 +2,23 @@
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
+	$("#newusername").keyup(function() {
+		var tempUsername = $("#newusername").val();
+
+		function doesUserExist(result) {
+			if (result.length != 0) {
+				$("#existingUsername").text("Username already exists.");
+				$("#createUserButton").attr('disabled',true);
+			} else {
+				$("#existingUsername").text("");
+				$("#createUserButton").attr('disabled',false);
+			}
+		}
+		// issue the GET request
+		if (tempUsername.length > 0) {
+    		$.get('/userdata/' + tempUsername, doesUserExist);
+   	 	}
+	});
     initializePage();
 })
 

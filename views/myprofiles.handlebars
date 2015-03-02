@@ -46,9 +46,14 @@
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title" id="myModalLabel">Add Profile</h4>
             </div>
-            <div class="modal-body">  
+            <div class="modal-body">
+              <div id="activityAlert" class="alert alert-danger alert-dismissible" role="alert" style="visibility: hidden; display:none;">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Error Adding Profile!</strong> You must select at least one activity to add a profile.
+              </div>
               <label class="modalLabel" for="ProfileName">Profile Name:</label>
-              <input name="profileName" type="text" class="form-control" placeholder="Note: The profile name isn't modifiable." required>
+              <input id="newprofilename" name="profileName" type="text" class="form-control" placeholder="Note: The profile name isn't modifiable." required>
+              <p id="existingProfilename"></p>
               <hr>
               <h4>Bench Press Spotter<h4>
               <label class="modalLabel" for="LiftingRange">Lifting Range (lbs):</label>

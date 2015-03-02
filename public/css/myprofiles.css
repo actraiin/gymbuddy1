@@ -2,6 +2,10 @@ body {
 	background-color: #ecf0f1;
 }
 
+#existingProfilename {
+    color: #e74c3c;
+}
+
 .pageTitle {
 	color: #ffffff;
 	margin-top: 0px;

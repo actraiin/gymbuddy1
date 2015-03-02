@@ -2,6 +2,10 @@ body {
 	background-color: #ecf0f1;
 }
 
+#existingUsername {
+    color: #e74c3c;
+}
+
 .container {
     padding-bottom: 5%;
 }

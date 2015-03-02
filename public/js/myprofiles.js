@@ -7,6 +7,27 @@ var global_username;
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	
+	$("#newprofilename").keyup(function() {
+		var tempProfilename = $("#newprofilename").val();
+		function doesProfileExist(result) {
+			var i;
+			for (i = 0; i < result.length; ++i) {
+				if (result[i].profileName == tempProfilename) {
+					$("#existingProfilename").text("Profile name already exists.");
+					$("#addBtn").attr('disabled',true);
+					break;
+				} else {
+					$("#existingProfilename").text("");
+					$("#addBtn").attr('disabled',false);
+				}
+			}
+		}
+		// issue the GET request
+		if (tempProfilename.length > 0) {
+			$.get('/myprofiles/' + global_username, doesProfileExist);
+		}
+	});
 })
 
 /*
