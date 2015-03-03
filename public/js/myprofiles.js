@@ -51,6 +51,15 @@ function initializePage() {
     global_username = username;
 
     function displayProfiles(profiles) {
+    	if (profiles.length == 0) {
+            $("#profilesTap").text("");
+            $("#emptyProfilesTable").attr('style', 'visibility: visible; display:block;');
+            return;
+        } else {
+            $("#profilesTap").text("Tap anywhere on a profile to edit it.");
+            $("#emptyProfilesTable").attr('style', 'visibility: hidden; display:none;');
+        }
+
     	// compose the HTML
     	var new_html = '<tr><th><center>Name</center></th><th><center>Activity</center></th><th><center>Days</center></th></tr>';
     	

@@ -30,6 +30,15 @@ function initializePage() {
     global_username = username;
     
     function displayMatches(matches) {
+        if (matches.length == 0) {
+            $("#matchesTap").text("");
+            $("#emptyMatchesTable").attr('style', 'visibility: visible; display:block;');
+            return;
+        } else {
+            $("#matchesTap").text("Tap anywhere on a match to view it.");
+            $("#emptyMatchesTable").attr('style', 'visibility: hidden; display:none;');
+        }
+
         // compose the HTML
         var new_html =
         '<tr><th><center>My username is...</center><th><center>I\'m free to work out at...</center></th></tr>';
