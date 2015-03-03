@@ -78,5 +78,20 @@ body {
     box-shadow: none;
 }
 
+#helpButton2 {
+    color: #1abc9c;
+    height: 20px;
+    font-size: 20px;
+}
+
+#helpButton2:hover {
+    color: #3cc8ac;
+}
+
+#helpButton2:active{
+    color: #00aa89;
+    box-shadow: none;
+}
+
 
 
