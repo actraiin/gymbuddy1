@@ -11,7 +11,20 @@ $(document).ready(function() {
 function initializePage() {
     $("#registerButton").click(register);
     $("#loginButton").click(validate);
-    $("#helpButton").click(help);
+    
+    var random_num = Math.random();
+    
+    var random_num = Math.random();
+    
+    if(random_num > 0.5){
+        $("#helpButton2").hide();
+        $("#helpButton").click(help);
+    }
+    else
+    {
+        $("#helpButton").hide();
+        $("#helpButton2").click(help2);
+    }
 }
 
 function register(e) {
@@ -52,5 +65,14 @@ function validatePassword(password) {
 function help(e) {
     // Cancel the default action, which prevents the page from reloading
     e.preventDefault();
-    window.location.href = "/help";
+    woopra.track("help_button_click_a");
+    //window.location.href = "/help";
 }
+
+function help2(e) {
+    // Cancel the default action, which prevents the page from reloading
+    e.preventDefault();
+    woopra.track("help_button_click_b");
+    //window.location.href = "/help";
+}
+
