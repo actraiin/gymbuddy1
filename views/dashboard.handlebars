@@ -21,7 +21,10 @@
     </div>
     <div class="container">  
       <h4>Your Matches</h4>
-      <h6>Tap anywhere on a match to view it.</h6>
+      <h6 id="matchesTap"></h6>
+      <div id="emptyMatchesTable" class="alert alert-info alert-dismissible" role="alert" style="visibility: hidden; display:none;">
+        <strong>You have no matches.</strong> Try adding a new profile or modifying an existing one by clicking the 'My Profiles' button below.
+      </div>
       <table class="tftable" border="1">
       </table>
       <br>

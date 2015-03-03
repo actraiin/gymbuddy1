@@ -23,14 +23,17 @@
 	<div class="container">
     
     <h4>Active Profiles</h4>
-    <h6>Tap anywhere on a profile to edit it.</h6>
+    <h6 id="profilesTap"></h6>
+    <div id="emptyProfilesTable" class="alert alert-info alert-dismissible" role="alert" style="visibility: hidden; display:none;">
+        <strong>You have no profiles.</strong> Try adding a new profile by clicking the 'Add Profile' button below.
+      </div>
     <table class="tftable" border="1"> 
     </table>
     <br>
 
     <div class="row">
         <div class="col-md-12">
-            <button id="backButton" class="btn btn-primary"><span aria-hidden="true">&larr;</span> Back</button>
+            <button id="backButton" class="btn btn-primary"><span aria-hidden="true">&larr;</span> Dashboard</button>
             <span class="pull-right">
                 <button class="btn btn-primary" data-toggle="modal" data-target="#CreateProfileModal" pull-right>Add Profile</button>
             </span>
@@ -126,7 +129,7 @@
                 </label>
               </div>
               <hr>
-              <h4>Schedule<h4>
+              <h4>My Availability<h4>
               <label class="modalLabel" for="Monday">Monday:</label>
               <input type="time" name="monday_time">
               <br>
@@ -241,7 +244,7 @@
                 </label>
               </div>
               <hr>
-              <h4>Schedule<h4>
+              <h4>My Availability<h4>
               <label class="modalLabel" for="Monday">Monday:</label>
               <input id="montime" type="time" name="monday_timeEdit">
               <br>
