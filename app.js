@@ -54,8 +54,8 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/login', login.login);
-app.get('/newUser', newUser.registerNewUser);
+app.get('/login/:username/:password', login.login);
+app.get('/newUser/:name/:age/:gender/:contact/:username/:password', newUser.registerNewUser);
 app.get('/register', register.registerNewUser);
 app.get('/dashboard', dashboard.viewDashboard);
 app.get('/dashboard/:username', dashboard.viewMatches);

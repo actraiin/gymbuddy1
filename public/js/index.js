@@ -31,22 +31,30 @@ function register(e) {
 
 function validate(e)
 {
+    e.preventDefault();
 	var username = document.getElementById("username").value;
 	var password = document.getElementById("password").value;
-
-	if (validateEmail(username)) {
-    	if (validatePassword) {
-    		//let the user login
-    	}
-    	else
-    	{
-    		//alert user that password was incorrect. 
-    	}
-	} 
-	else
-	{
-		//alert user
-	}
+    
+    function verifyMatch(user)
+    {
+        if (user.length == 0)
+            $("#message")[0].innerHTML = "<font color=red>Incorrect username or password</font>";
+        else
+        {
+            var d = new Date();
+            var exdays = 1;
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+d.toUTCString();
+            
+            document.cookie = "gymBuddyUser=" + username + "; " + expires;
+            
+            window.location.href = "dashboard";
+        }
+            
+    }
+    
+    // issue the GET request
+    $.get('/login/' + username + '/' + password, verifyMatch);
 }
 
 //Regex validation

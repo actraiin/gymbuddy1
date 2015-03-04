@@ -6,6 +6,10 @@ body {
     color: #e74c3c;
 }
 
+.errorMessage {
+    color: #e74c3c;
+}
+
 .container {
     padding-bottom: 5%;
 }
@@ -35,6 +39,12 @@ body {
     background: #ffffff;
     border: 0px;
     border-radius: 15px;
+}
+
+.btn-primary:disabled {
+    background: #a2a0a0;
+    color: #1abc9c;
+    box-shadow: none;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {

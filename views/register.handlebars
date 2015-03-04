@@ -25,7 +25,7 @@
       <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-              <label class="infolabel" for="name">Name:</label>
+              <label class="infolabel" for="name">Name:<div class="errorMessage" id="nameExist"></div></label>
               <input type="text" class="form-control" id="name" placeholder="Enter your full name" name="name">
             </div>
         </div>
@@ -33,13 +33,13 @@
       <div class="row">
         <div class="col-xs-3">
             <div class="form-group">
-              <label class="infolabel" for="age">Age:</label>
+              <label class="infolabel" for="age">Age:<div class="errorMessage" id="ageExist"></div></label>
               <input type="text" class="form-control" id="age" placeholder="" name="age">
             </div>
 
         </div>
         <div class="col-xs-9">
-          <label for="gender" class="control-label input-group infolabel">Gender:</label>
+          <label for="gender" class="control-label input-group infolabel">Gender:<div class="errorMessage" id="genderExist"></div></label>
           <div class="btn-group btn-group-justified" data-toggle="buttons">
             <label class="btn btn-default">
               <input type="radio" name="gender" value="male">Male
@@ -53,20 +53,19 @@
       <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-              <label class="infolabel" for="contact">Contact:</label>
+              <label class="infolabel" for="contact">Contact:<div class="errorMessage" id="contactExist"></div></label>
               <input type="text" class="form-control" id="contact" placeholder="ex. (xxx) xxx-xxxx" name="contact">
             </div>
         </div>
         <div class="col-md-12">
             <div class="form-group">
-              <label class="infolabel" for="newusername">Username:</label>
+              <label class="infolabel" for="newusername">Username:<div id="existingUsername"></div></label>
               <input type="username" class="form-control" id="newusername" placeholder="Enter username" name="username">
-              <p id="existingUsername"></p>
             </div>
         </div>
         <div class="col-md-12">
             <div class="form-group">
-              <label class="infolabel" for="newpassword">Password:</label>
+              <label class="infolabel" for="newpassword">Password:<div class="errorMessage" id="notMatching"></div></label>
               <input type="password" class="form-control" id="newpassword" placeholder="Enter password" name="password">
             </div>
         </div>

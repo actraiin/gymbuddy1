@@ -62,6 +62,11 @@ body {
     width: 98%;
 }
 
+.message {
+    margin-left: 1%;
+    width: 98%;
+}
+
 .btn-primary {
     background: #1abc9c;
     color: #ffffff;
