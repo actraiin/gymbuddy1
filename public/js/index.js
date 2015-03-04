@@ -11,9 +11,7 @@ $(document).ready(function() {
 function initializePage() {
     $("#registerButton").click(register);
     $("#loginButton").click(validate);
-    
-    var random_num = Math.random();
-    
+        
     var random_num = Math.random();
     
     if(random_num > 0.5){
