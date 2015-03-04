@@ -17,8 +17,8 @@ function initializePage() {
         var c = ca[i];
         while (c.charAt(0)==' ') c = c.substring(1);
         username = c.substring(name.length);
-        if (!c.indexOf(name) == 0)
-            window.location.href = "/";
+        if (!c.indexOf(name) == 0){}
+            //window.location.href = "/";
     }
 
     function backFromDel(result) {
