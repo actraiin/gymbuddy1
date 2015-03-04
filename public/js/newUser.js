@@ -17,7 +17,7 @@ function initializePage() {
         var expires = "expires="+d.toUTCString();
         
         var query = window.location.search.substring(1);
-        var username = query.split("&")[0];
+        var username = query.split("&")[4];
         username = username.substring(username.indexOf("=")+1);
         document.cookie = "gymBuddyUser=" + username + "; " + expires;
         window.location.href = "dashboard";
