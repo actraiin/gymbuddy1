@@ -56,7 +56,7 @@ function initializePage() {
             $("#emptyProfilesTable").attr('style', 'visibility: visible; display:block;');
             return;
         } else {
-            $("#profilesTap").text("Tap anywhere on a profile to edit it.");
+            $("#profilesTap").text("Tap anywhere on a workout to edit it.");
             $("#emptyProfilesTable").attr('style', 'visibility: hidden; display:none;');
         }
 
