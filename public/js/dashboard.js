@@ -43,7 +43,7 @@ function initializePage() {
 
         // compose the HTML
         var new_html =
-        '<tr><th><center>My username is...</center><th><center>I\'m free to work out at...</center></th></tr>';
+        '<tr><th><center>My username is...</center><th><center>I\'m free to work out on...</center></th></tr>';
         
         for (var i =0; i < matches.length; i++)
         {
