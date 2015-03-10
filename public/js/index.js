@@ -11,18 +11,7 @@ $(document).ready(function() {
 function initializePage() {
     $("#registerButton").click(register);
     $("#loginButton").click(validate);
-        
-    var random_num = Math.random();
-    
-    if(random_num > 0.5){
-        $("#helpButton2").hide();
-        $("#helpButton").click(help);
-    }
-    else
-    {
-        $("#helpButton").hide();
-        $("#helpButton2").click(help2);
-    }
+    $("#helpButton2").click(help2);
 }
 
 function register(e) {

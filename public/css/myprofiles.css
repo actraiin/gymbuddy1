@@ -6,6 +6,10 @@ body {
     color: #e74c3c;
 }
 
+.container {
+    padding-bottom: 5%;
+}
+
 .pageTitle {
 	color: #ffffff;
 	margin-top: 0px;
