@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Profile</title>
+    <title>My Workout</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -22,10 +22,10 @@
     </div>
 	<div class="container">
     
-    <h4>Active Profiles</h4>
+    <h4>Active Workouts</h4>
     <h6 id="profilesTap"></h6>
     <div id="emptyProfilesTable" class="alert alert-info alert-dismissible" role="alert" style="visibility: hidden; display:none;">
-        <strong>You have no profiles.</strong> Try adding a new profile by clicking the 'Add Profile' button below.
+        <strong>You have no workouts.</strong> Try adding a new workout by clicking the 'Add Workout' button below.
       </div>
     <table class="tftable" border="1"> 
     </table>
@@ -35,7 +35,7 @@
         <div class="col-md-12">
             <button id="backButton" class="btn btn-primary"><span aria-hidden="true">&larr;</span> Dashboard</button>
             <span class="pull-right">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#CreateProfileModal" pull-right>Add Profile</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#CreateProfileModal" pull-right>Add Workout</button>
             </span>
         </div>
     </div>
@@ -47,15 +47,15 @@
           <form role="form" action="/addProfile" method="get">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Add Profile</h4>
+              <h4 class="modal-title" id="myModalLabel">Add Workout</h4>
             </div>
             <div class="modal-body">
               <div id="activityAlert" class="alert alert-danger alert-dismissible" role="alert" style="visibility: hidden; display:none;">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong>Error Adding Profile!</strong> You must select at least one activity to add a profile.
+                <strong>Error Adding Workout!</strong> You must select at least one activity to add a workout.
               </div>
-              <label class="modalLabel" for="ProfileName">Profile Name:</label>
-              <input id="newprofilename" name="profileName" type="text" class="form-control" placeholder="Note: The profile name isn't modifiable." required>
+              <label class="modalLabel" for="ProfileName">Workout Name:</label>
+              <input id="newprofilename" name="profileName" type="text" class="form-control" placeholder="Note: The workout name isn't modifiable." required>
               <p id="existingProfilename"></p>
               <hr>
               <h4>Bench Press<h4>
@@ -195,7 +195,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-              <button type="submit" class="btn btn-primary" id="addBtn">Add Profile</button>
+              <button type="submit" class="btn btn-primary" id="addBtn">Add Workout</button>
             </div>
           </form>
         </div>
@@ -209,11 +209,11 @@
           <form role="form" action="/saveProfile" method="get">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="editModalTitle">Edit Profile</h4>
+              <h4 class="modal-title" id="editModalTitle">Edit Workout</h4>
             </div>
             <div class="modal-body">
-              <label class="modalLabel" for="ProfileNameEdit">Profile Name:</label>
-              <input name="profileNameEdit" id="profileNameEditID" type="text" class="form-control" placeholder="Name your profile" readOnly="true">
+              <label class="modalLabel" for="ProfileNameEdit">Workout Name:</label>
+              <input name="profileNameEdit" id="profileNameEditID" type="text" class="form-control" placeholder="Name your workout" readOnly="true">
               <hr>
               <h4>Bench Press<h4>
               <label class="modalLabel" for="LiftingRange">Lifting Range (lbs):</label>
