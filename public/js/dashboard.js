@@ -108,7 +108,7 @@ function loadModalWithMatch(result) {
         $('#matchedAge').text("Age: " + age);
         $('#matchedGender').text("Gender: " + gender);
         $('#matchedContact').text("Contact: " + contact);
-        $('#sms').attr("href", "sms:" + contact + " ?body=HCI");
+        $('#sms').attr("href", "sms:" + contact);
         $('#sms').text("Send " + name + " a text!");
     }
     // issue a GET request
